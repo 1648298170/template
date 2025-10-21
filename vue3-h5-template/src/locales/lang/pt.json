@@ -1,0 +1,9 @@
+{
+  "home": {
+    "title": "Olá Mundo"
+  },
+  "pickerLang": {
+    "language": "Idioma",
+    "placeholder": "Selecione o idioma"
+  }
+}
