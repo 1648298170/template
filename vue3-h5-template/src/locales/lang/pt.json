@@ -5,5 +5,19 @@
   "pickerLang": {
     "language": "Idioma",
     "placeholder": "Selecione o idioma"
+  },
+  "login": {
+    "title": "Login do Usuário",
+    "username": "Nome de Usuário",
+    "password": "Senha",
+    "usernamePlaceholder": "Por favor, insira seu nome de usuário",
+    "passwordPlaceholder": "Por favor, insira sua senha",
+    "loginButton": "Entrar",
+    "forgotPassword": "Esqueceu a Senha?",
+    "register": "Registre-se Agora",
+    "usernameRequired": "Por favor, insira seu nome de usuário",
+    "passwordRequired": "Por favor, insira sua senha",
+    "loginSuccess": "Login bem-sucedido",
+    "loginFailed": "Falha no login, por favor verifique seu nome de usuário ou senha"
   }
 }

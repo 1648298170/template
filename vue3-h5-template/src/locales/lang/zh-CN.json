@@ -5,5 +5,19 @@
   "pickerLang": {
     "language": "语言",
     "placeholder": "请选择语言"
+  },
+  "login": {
+    "title": "用户登录",
+    "username": "用户名",
+    "password": "密码",
+    "usernamePlaceholder": "请输入用户名",
+    "passwordPlaceholder": "请输入密码",
+    "loginButton": "登录",
+    "forgotPassword": "忘记密码？",
+    "register": "立即注册",
+    "usernameRequired": "请输入用户名",
+    "passwordRequired": "请输入密码",
+    "loginSuccess": "登录成功",
+    "loginFailed": "登录失败，请检查用户名或密码"
   }
 }

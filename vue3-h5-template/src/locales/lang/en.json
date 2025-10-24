@@ -5,5 +5,19 @@
   "pickerLang": {
     "language": "Language",
     "placeholder": "Select Language"
+  },
+  "login": {
+    "title": "User Login",
+    "username": "Username",
+    "password": "Password",
+    "usernamePlaceholder": "Please enter your username",
+    "passwordPlaceholder": "Please enter your password",
+    "loginButton": "Login",
+    "forgotPassword": "Forgot Password?",
+    "register": "Register Now",
+    "usernameRequired": "Please enter your username",
+    "passwordRequired": "Please enter your password",
+    "loginSuccess": "Login successful",
+    "loginFailed": "Login failed, please check your username or password"
   }
 }

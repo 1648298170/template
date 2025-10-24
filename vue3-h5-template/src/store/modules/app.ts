@@ -1,10 +1,12 @@
 
 export const useAppStore = defineStore('app-store',() => {
-  const appState = ref(0)
+  const state = reactive({
+    userInfo:{}
+  })
 
-  const increment = () => {
-    appState.value++
+  const setUserInfo = (userInfo:{[key:string]:unknown}) => {
+    state.userInfo = userInfo
   }
 
-  return { appState, increment }
+  return { state, setUserInfo }
 })
