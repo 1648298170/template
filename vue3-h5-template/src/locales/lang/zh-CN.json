@@ -19,5 +19,16 @@
     "passwordRequired": "请输入密码",
     "loginSuccess": "登录成功",
     "loginFailed": "登录失败，请检查用户名或密码"
+  },
+  "profile": {
+    "title": "个人中心",
+    "content": "这是个人中心内容",
+    "languageSetting": "语言设置"
+  },
+  "tabs": {
+    "home": "首页",
+    "category": "分类",
+    "cart": "购物车",
+    "profile": "我的"
   }
 }

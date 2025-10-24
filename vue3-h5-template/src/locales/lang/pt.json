@@ -19,5 +19,16 @@
     "passwordRequired": "Por favor, insira sua senha",
     "loginSuccess": "Login bem-sucedido",
     "loginFailed": "Falha no login, por favor verifique seu nome de usuário ou senha"
+  },
+  "profile": {
+    "title": "Perfil",
+    "content": "Este é o conteúdo do perfil",
+    "languageSetting": "Configuração de Idioma"
+  },
+  "tabs": {
+    "home": "Início",
+    "category": "Categoria",
+    "cart": "Carrinho",
+    "profile": "Perfil"
   }
 }

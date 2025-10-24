@@ -19,5 +19,16 @@
     "passwordRequired": "Please enter your password",
     "loginSuccess": "Login successful",
     "loginFailed": "Login failed, please check your username or password"
+  },
+  "profile": {
+    "title": "Profile",
+    "content": "This is profile content",
+    "languageSetting": "Language Setting"
+  },
+  "tabs": {
+    "home": "Home",
+    "category": "Category",
+    "cart": "Cart",
+    "profile": "Profile"
   }
 }
