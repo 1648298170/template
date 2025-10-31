@@ -5,12 +5,11 @@
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .category-page {
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
 }
 </style>

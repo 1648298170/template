@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- <div class="p-2 bg-amber c-fuchsia">{{ $t('home.title') }}</div>
-    <PickerLang></PickerLang>
-     -->
     <!-- 页面内容区域 -->
     <div class="page-container">
       <HomeIndex v-show="appStore.currentTabsIndex === 0" />
@@ -46,7 +43,8 @@ onMounted(() => {
 
 <style scoped>
 .page-container {
-  padding: 20px;
-  min-height: calc(100vh - 85px);
+  /* padding: 20px; */
+  /* min-height: calc(100vh - 85px); */
+  min-height: calc(var(--vh, 1vh) * 100 - 68px);
 }
 </style>

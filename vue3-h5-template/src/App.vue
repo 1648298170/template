@@ -7,6 +7,10 @@
     </transition>
   </router-view>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useVh } from '@/utils/useVh'
+
+useVh()
+</script>
 
 <style scoped></style>

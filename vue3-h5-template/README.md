@@ -5,6 +5,11 @@
 
 ## 技术栈
 
+### 环境
+- **Node.js v22.20.0**：JavaScript 运行环境，用于执行服务器端代码
+- **npm 10.9.3**：快速、节省磁盘空间的包管理工具，用于安装项目依赖
+- **pnpm 10.18.3**：快速、节省磁盘空间的包管理工具，用于安装项目依赖
+
 ### 核心框架
 - **Vue 3.5**：渐进式 JavaScript 框架，提供响应式数据绑定和组件化开发
 - **TypeScript 5.9**：静态类型检查，增强代码可维护性和开发体验
@@ -32,6 +37,9 @@
 - **ESLint 9.3**：代码检查工具，确保代码质量和一致性
 - **Prettier 3.6**：代码格式化工具，保持代码风格统一
 - **Vue-tsc 3.1**：Vue 的 TypeScript 编译器，提供类型检查
+- **Husky 8.0**：Git 钩子工具，用于在 Git 操作时执行脚本
+- **Commitizen 4.3**：交互式 Commit 工具，规范 Git 提交信息格式
+- **Commitlint 20.1**：Commit 信息校验工具，确保提交信息符合规范
 
 ## 项目结构
 
@@ -69,6 +77,16 @@ src/
 │   └── home/        # 首页视图
 ├── App.vue          # 根组件
 └── main.ts          # 应用入口文件
+
+项目根目录重要文件/目录：
+├── .husky/          # Husky Git 钩子配置
+│   ├── _/           # Husky 内部文件
+│   ├── commit-msg   # Commit message 钩子，用于校验提交信息格式
+│   └── pre-commit   # Pre-commit 钩子，用于提交前代码检查
+├── commitlint.config.cjs  # Commitlint 配置文件，定义提交信息规范
+├── git-push-script.js     # Git 推送脚本，集成 Commitizen
+├── package.json           # 项目配置文件，包含依赖和脚本
+└── README.md              # 项目说明文档
 ```
 
 ## 核心功能特性
@@ -104,6 +122,13 @@ src/
 - 统一的错误处理和数据处理逻辑
 - 支持多环境配置（开发、测试、生产）
 
+### 7. Git 提交规范
+- 集成 Husky，自动在 Git 操作时执行检查脚本
+- 集成 Commitizen，提供交互式 Git 提交界面
+- 集成 Commitlint，校验提交信息是否符合规范
+- Pre-commit 钩子：提交前自动执行 ESLint 代码检查和 Prettier 代码格式化
+- Commit-msg 钩子：提交时校验 Commit 信息格式
+
 ## 开发指南
 
 ### 环境要求
@@ -119,7 +144,7 @@ pnpm install
 ```bash
 pnpm dev
 ```
-启动后会自动打开浏览器，访问 http://localhost:5173/
+启动后会自动打开浏览器，访问 http://localhost:5174/
 
 ### 构建生产版本
 ```bash
@@ -141,6 +166,24 @@ pnpm format
 ```bash
 pnpm lint
 ```
+
+### 规范化提交
+```bash
+pnpm commit
+```
+使用 Commitizen 交互式界面生成符合规范的 Commit 信息
+
+### 推送代码
+```bash
+pnpm push
+```
+使用自定义脚本推送代码到远程仓库
+
+### 预发布合并代码
+```bash
+pnpm pre-release
+```
+使用自定义脚本合并并版本记录到远程仓库
 
 ## 配置说明
 
@@ -180,6 +223,22 @@ postcss: {
 - 设置默认语言
 - 配置全局注入
 - 语言切换逻辑
+
+### 4. Git 提交规范配置
+- **Husky 配置**：在 .husky 目录下配置 Git 钩子
+  - pre-commit：提交前执行 `pnpm lint` 进行代码检查和格式化
+  - commit-msg：提交时使用 commitlint 校验提交信息格式
+- **Commitizen 配置**：在 package.json 中配置 commitizen 路径
+- **Commitlint 配置**：使用 @commitlint/config-conventional 规范
+
+### 5. 代码格式化配置
+- **Prettier 配置**：在 .prettierrc.json 中配置代码格式化规则
+  - 使用单引号
+  - 不使用分号
+  - 设置打印宽度为100字符
+- **ESLint 配置**：在 eslint.config.ts 中配置代码检查规则
+  - 结合 Prettier 和 Vue TypeScript 规则
+  - 关闭多词组件名校验
 
 ## 使用示例
 
@@ -248,6 +307,12 @@ locale.value = 'en'
 - 合理使用 v-memo、v-once 等指令优化渲染性能
 - 懒加载路由和组件
 
+### 5. Git 提交规范
+- 使用 `pnpm commit` 命令进行规范化提交
+- 遵循 Conventional Commits 规范
+- 提交信息应清晰描述变更内容和类型
+- 在提交前确保代码通过 ESLint 检查和 Prettier 格式化
+
 ## 常见问题
 
 1. **如何添加新的语言支持？**
@@ -266,6 +331,16 @@ locale.value = 'en'
 4. **如何调试 Mock 数据？**
    - 修改 src/mock/mock.ts 中的模拟数据
    - Mock 数据会自动热更新，无需重启开发服务器
+
+5. **如何进行规范化提交？**
+   - 使用 `pnpm commit` 命令启动 Commitizen 交互式提交界面
+   - 按照提示选择提交类型、输入提交信息
+   - 系统会自动校验提交信息是否符合规范
+
+6. **代码提交前会进行哪些检查？**
+   - 使用 ESLint 检查代码质量并自动修复问题
+   - 使用 Prettier 格式化代码风格
+   - 确保代码符合团队规范后再允许提交
 
 ## 许可证
 MIT

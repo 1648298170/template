@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import {debounce} from '@/utils/tools'
+import { debounce } from '@/utils/tools'
 interface Props {
   value: number | string
   duration?: number
@@ -23,7 +23,6 @@ const displayValue = ref(0)
 let animationId: number
 let startTime: number
 let startValue: number
-
 
 const animate = (timestamp: number) => {
   if (!startTime) {

@@ -80,13 +80,13 @@ watch(
       fieldValue.value = selectedOption.text
       pickerValue.value = [newLocale as PickerValue]
     }
-  }
+  },
 )
 
 const onConfirm = ({ selectedValues, selectedOptions }: PickerConfirmPayload) => {
   // 关闭语言选择器弹窗
   showPicker.value = false
-  
+
   // 确保 selectedValues 和 selectedOptions 不为空
   if (selectedValues.length > 0 && selectedOptions.length > 0) {
     // 更新选择器的选中值

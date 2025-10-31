@@ -1,4 +1,11 @@
 //全局样式
 
+html,
+body,
+#app {
+  min-height: calc(var(--vh, 1vh) * 100);
+  height: auto;
+}
+
 $test-font: 14px;
 $test-color: black;

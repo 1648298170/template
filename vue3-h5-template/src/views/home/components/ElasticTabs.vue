@@ -49,14 +49,15 @@ const changeTab = (index: number) => {
 
 <style scoped lang="scss">
 .nav-container {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 40px;
   background: #fff;
   border-radius: 35px;
   box-shadow: 0 5px 15px rgba (0, 0, 0, 0.08);
   overflow: hidden;
-  margin-bottom: 5px;
 
   .nav {
     position: relative;
